@@ -7,7 +7,7 @@ import Container from '@/components/ui/container';
 
 type Params = Promise<{ productId: string }>;
 
-const ProductPage = async ({ params }: { params: Params }) => {
+const Page = async ({ params }: { params: Params }) => {
   const { productId } = await params;
   const product = await getProduct(productId);
   const suggestProducts = await getProducts({ categoryId: product?.category?.id });
@@ -29,4 +29,4 @@ const ProductPage = async ({ params }: { params: Params }) => {
   );
 };
 
-export default ProductPage;
+export default Page;

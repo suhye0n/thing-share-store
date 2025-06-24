@@ -6,7 +6,7 @@ import ProductList from '@/components/product-list';
 
 export const revalidate = 0;
 
-const HomePage = async () => {
+const Page = async () => {
   const banner = await getBanner('7dd51b25-6b9b-404e-a2d8-4c0d57b19253');
   const products = await getProducts({ isFeatured: true });
 
@@ -23,4 +23,4 @@ const HomePage = async () => {
   );
 };
 
-export default HomePage;
+export default Page;
